@@ -1,0 +1,109 @@
+<!--     
+    Author    :骆金参(Luo_0412)
+    BuildDate :2016-5-7
+    Version   :1.0
+    Function  :带登录注册的头部区 
+    Update    : 
+-->
+
+<style>
+    .navbar {
+        background: #CAECEE;
+    }
+    #logo_Chat {
+        height:150px;
+    }
+    #logo_Title {
+        position:relative;
+        top:10px;
+        font-size: 56px;
+        margin-left: 50px;
+        color: #72B206;
+        font-weight: bolder;
+    }
+    #login_Btn {
+        margin-top:  3px;
+        margin-left: 20px;
+    }
+    #sign_Btn {
+        margin-top: 3px;
+    }
+    #is_Admin {
+        margin-top:  13px;
+    }
+/*        .checkboxThree {
+        width: 120px;
+        height: 40px;
+        background: #333;
+        border-radius: 50px;
+        position: relative;
+    }
+    .checkboxThree:before {
+        content: '管理员';
+        position: absolute;
+        top: 12px;
+        left: 13px;
+        height: 2px;
+        color: #26ca28;
+        font-size: 16px;
+    }
+    .checkboxThree:after {
+        content: '校友';
+        position: absolute;
+        top: 12px;
+        left: 84px;
+        height: 2px;
+        color: #ddd;
+        font-size: 16px;
+    }
+    .checkboxThree label {
+        display: block;
+        width: 52px;
+        height: 22px;
+        border-radius: 50px;
+     
+        -webkit-transition: all .5s ease;
+        -moz-transition: all .5s ease;
+        -o-transition: all .5s ease;
+        -ms-transition: all .5s ease;
+        transition: all .5s ease;
+        cursor: pointer;
+        position: absolute;
+        top: 9px;
+        z-index: 1;
+        left: 12px;
+        background: #ddd;
+    }
+    .checkboxThree input[type=checkbox]:checked + label {
+        left: 60px;
+        background: #26ca28;
+    }*/
+</style>
+
+
+<nav class="navbar  navbar-top-fixed">
+  <div class="container">
+    <div class="navbar-header">
+        <img alt="Brand" src="images/logo_Chat.png"   id="logo_Chat">
+        <span id="logo_Title"> AdList </span>
+    </div>
+
+    <form class="navbar-form navbar-right" action="func/check_Login.php" 
+        method="get" id="login_Form">
+
+        <div class="form-group">
+            <input type="text"     class="form-control" placeholder="输入 用户名" name = "userName"> <br>
+            <input type="password" class="form-control" placeholder="输入 密码"   name = "userPwd"> 
+        </div> <br>
+<!--         <div class="checkboxThree">
+            <input type="checkbox" value="1" id="checkboxThreeInput" name="is_Admin" hidden/>
+            <label for="checkboxThreeInput" ></label>
+        </div>  -->
+        <input type="checkbox"  name = "hello[]" value='1' id="is_Admin" >  管理员  
+        <button type="submit"   class="btn btn-success" id="login_Btn">登录</button> 
+        <button type="submit"   class="btn btn-default" id="sign_Btn" >注册</button> 
+    </form>
+
+  </div>
+</nav>
+

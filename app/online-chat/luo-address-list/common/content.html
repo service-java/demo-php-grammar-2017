@@ -1,0 +1,34 @@
+<!--     
+    Author    :骆金参(Luo_0412)
+    BuildDate :2016-5-7
+    Version   :1.0
+    Function  :搜索区 
+    Update    : 
+-->
+
+<style>
+    .form-inline {
+        margin-top: 15px;
+    }
+</style>
+
+<form class="form-inline"
+      action="func/search_Content.php"
+      method="get">
+  <div class="form-group">
+    <label for="keyword">搜索私信</label>
+    <input type="text" class="form-control" id="keyword" name="keyword" placeholder="输入  关键词">
+  </div>
+  <label class="radio-inline">
+    <input type="radio" name="option" id="inlineRadio1" value="real_Name" checked> 校友名
+  </label>
+  <label class="radio-inline">
+    <input type="radio" name="option" id="inlineRadio2" value="enter_Year"> 入学年份
+  </label>
+  <label class="radio-inline">
+    <input type="radio" name="option" id="inlineRadio3" value="class_Name"> 班级名
+  </label>
+  <button type="submit" class="btn btn-default col-md-offset-6"> 查询</button>
+</form>
+
+

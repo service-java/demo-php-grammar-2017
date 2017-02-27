@@ -1,0 +1,60 @@
+<!--     
+    Author    :骆金参(Luo_0412)
+    BuildDate :2016-5-7
+    Version   :1.0
+    Function  :Qmen' 头部区 
+    Update    : 
+-->
+
+<style>
+    .navbar {
+      background: #CAECEE;
+    }
+    .navbar-header img {
+      height: 100px;
+    }
+    .navbar-header span {
+        font-size: 25px;
+        font-family: cursive;
+        color: #72B206;
+        font-weight: bold;
+        margin-left: 50px;
+    }
+    .navbar-form {
+        margin-top: 30px;
+    }
+</style>
+
+
+<nav class="navbar navbar-fixed-top">
+  <div class="container">
+    <!--  品牌logo -->
+    <div class="navbar-header ">
+        <img  src="images/logo_Chat.png"  alt="Brand">  
+        <span> Qmen' Home </span>
+    </div>
+
+    <!-- 附加功能区 -->
+    <form class="navbar-form navbar-right" role="search">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="知名校友  丁当">
+      </div>
+      <div class="btn-group">
+        <a href="https://www.baidu.com/s?wd=%E4%B8%81%E5%BD%93&rsv_spt=1&rsv_iqid=0x8e0ae7720022de7e&issp=1&f=8&rsv_bp=0&rsv_idx=2&ie=utf-8&tn=baiduhome_pg&rsv_enter=1&rsv_sug3=10&rsv_sug1=5&rsv_sug7=100&rsv_sug2=0&inputT=1791&rsv_sug4=2490" type="button" class="btn btn-success">搜索</a>
+        <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span class="caret"></span>
+          <span class="sr-only">搜索</span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a href="https://www.baidu.com/">搜索</a></li>
+          <li><a href="http://www.verydemo.com/">讲义联盟</a></li>
+          <li><a href="http://5sing.kugou.com/index.html">校园音乐翻唱榜</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="func/quit.php">退出系统</a></li>
+        </ul>
+      </div>
+    </form>
+
+  </div>
+</nav>
+

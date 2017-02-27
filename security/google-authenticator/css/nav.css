@@ -1,0 +1,45 @@
+.btn-login{
+	margin: 9px;
+	border-bottom-right-radius: 3px;
+	border-top-right-radius: 3px;
+}
+.btn-register{
+	margin: -7px;
+	border-bottom-right-radius: 3px;
+	border-top-right-radius: 3px;
+}
+
+.nav-list-main{
+	display: none;
+	width: 200px;
+	background-color: white;
+	border-radius: 10px;
+	position: absolute;
+	left: 190px;
+	top: 75px;
+	z-index: 10;  /*postion:absllute才有效*/
+}
+.nav-list-main li{
+	list-style: none;
+	padding:5px
+}
+/*登录表单样式*/
+.text-info{
+	margin-left:150px;
+	width: 250px;
+	height: 30px;
+	margin-bottom: 10px;
+	position: relative;
+	left: -30px;
+}
+.text-icno{
+	position: relative;
+	left:85px;
+}
+.radio-info{
+	margin-left:150px;
+}
+.login-info{
+	list-style: none;
+}
+

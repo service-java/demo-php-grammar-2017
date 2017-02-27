@@ -1,0 +1,34 @@
+// 表格
+.ku-table {
+    border-collapse: collapse;
+    border: solid #DADADA 1px;
+    background-color:#fff;
+    text-align: center;
+    tr,td{border: solid #DADADA 1px; padding:10px;};
+}
+
+
+// 小球
+.ku-ball(@color) {
+    display: block;
+    background: black;
+    border-radius: 50%;
+    height: 40px;
+    line-height:38px;
+    width: 40px;
+    margin: 20px 5px;
+    float:left;
+    text-align:center;
+    color:#FFFFFF;
+    font-weight:bolder;
+    background: -webkit-radial-gradient(10px 10px, circle, @color, #000);
+    background: -moz-radial-gradient(10px 10px, circle, @color, #000);
+    background: -ms-radial-gradient(10px 10px, circle, @color, #000);
+    background: radial-gradient(10px 10px, circle, @color, #000);
+}
+.ku-ball-red {
+    .ku-ball(#ff0000);
+}
+.ku-ball-blue {
+    .ku-ball(#0000ff);
+}

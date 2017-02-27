@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>省市县</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+
+<div>
+    省份：
+    <select id="provinces">
+        <option value="">请选择省份</option>
+    </select>
+    市：
+    <select id="citys">
+        <option value="">请选择市</option>
+    </select>
+    县：
+    <select id="countys">
+        <option value="">请选择县</option>
+    </select>
+</div>
+
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        //  预加载所有的省份
+        //  type 1省2市3省
+        $.ajax({
+            type: "get",
+            url: "region_action.php", // type=1表示查询省份
+            data: {"parent_id": "1", "type": "1"},
+            dataType: "json",
+            success: function(data) {
+                $("#provinces").html("<option value=''>请选择省份</option>");
+                $.each(data, function(i, item) {
+                    $("#provinces").append("<option value='" + item.region_id + "'>" + item.region_name + "</option>");
+                });
+            }
+        });
+
+        // 省的改变监听
+        $("#provinces").change(function() {
+            $.ajax({
+                type: "get",
+                url: "region_action.php", // type =2表示查询市
+                data: {"parent_id": $(this).val(), "type": "2"},
+                dataType: "json",
+                success: function(data) {
+                    $("#citys").html("<option value=''>请选择市</option>");
+                    $.each(data, function(i, item) {
+                        $("#citys").append("<option value='" + item.region_id + "'>" + item.region_name + "</option>");
+                    });
+                }
+            });
+        });
+
+        // 市的改变监听
+        $("#citys").change(function() {
+            $.ajax({
+                type: "get",
+                url: "region_action.php", // type =3表示查询县
+                data: {"parent_id": $(this).val(), "type": "3"},
+                dataType: "json",
+                success: function(data) {
+                    $("#countys").html("<option value=''>请选择县</option>");
+                    $.each(data, function(i, item) {
+                        $("#countys").append("<option value='" + item.region_id + "'>" + item.region_name + "</option>");
+                    });
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>

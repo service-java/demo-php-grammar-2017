@@ -1,0 +1,11 @@
+﻿# 忽略临时文件夹
+tmp/*
+
+# 忽略以tmp-开头的文件
+tmp-*
+
+# 忽略src下的res文件夹
+assets/res/*
+assets/images/*
+
+

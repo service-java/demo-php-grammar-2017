@@ -1,0 +1,39 @@
+body {
+  background-color: #eee;
+  font-size: 15px;
+}
+.luo-display-box {
+  width: 100%;
+  border: 1px solid #ccc;
+  box-shadow: 7px 8px 7px #999;
+}
+.luo-display-box h2 {
+  text-align: center;
+}
+.luo-display-box p {
+  padding-left: 18px;
+}
+table.luo-info-table {
+  padding-top: 10px;
+  border: solid #dadada 1px;
+  background-color: #fff;
+  width: 330px;
+  border-spacing: 0;
+  color: #2b2b2b;
+  *border-collapse: collapse;
+  /* IE7 and lower */
+}
+table.luo-info-table td:nth-child(2) {
+  text-align: left;
+}
+table.luo-info-table tr,
+table.luo-info-table td {
+  padding: 10px;
+  text-align: right;
+}
+table.luo-info-table th {
+  padding-bottom: 5px;
+  text-align: left;
+  text-indent: 28px;
+  border-bottom: solid #dfe4e7 1px;
+}

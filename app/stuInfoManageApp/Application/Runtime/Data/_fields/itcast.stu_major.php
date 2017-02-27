@@ -1,0 +1,1 @@
+a:4:{i:0;s:8:"major_id";i:1;s:10:"major_name";s:3:"_pk";s:8:"major_id";s:5:"_type";a:2:{s:8:"major_id";s:16:"int(10) unsigned";s:10:"major_name";s:11:"varchar(20)";}}

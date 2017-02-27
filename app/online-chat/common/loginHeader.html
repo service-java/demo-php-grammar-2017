@@ -1,0 +1,60 @@
+<!--     
+    Author    :骆金参(Luo_0412)
+    BuildDate :2016-5-13
+    Version   :1.0
+    Function  :Qmen' 带登录注册的头部区 
+    Update    : 
+-->
+
+<style>
+	.navbar {   
+	    background: #CAECEE;  /*背景色*/
+	}
+	.navbar-header img {
+      height: 150px;
+	}
+	.navbar-header span {
+      font-size: 40px;
+      font-family: cursive;
+      color: #72B206;
+      font-weight: bold;
+      margin-left: 50px;
+	}
+	.navbar-form  .form-group {
+      margin-bottom: 4px;
+	}
+	.navbar-form  #login_btn {
+		  margin-left: 35px;
+	}
+</style>
+
+
+<nav class="navbar  navbar-top-fixed">
+  <div class="container">
+    <!--  品牌logo -->
+    <div class="navbar-header"> 
+        <img  src="images/logo_chat.png" alt="Brand">  
+        <span> Qmen' Home </span>
+    </div>
+
+    <!-- 登录注册的表单 -->
+    <form class="navbar-form navbar-right" 
+          action="func/check_Login.php" 
+          method="get"> 
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="请输入  账号"  name = "userId"
+            > <br>
+            <input type="password" class="form-control" placeholder="请输入  密码" value ="" name = "userPwd"> 
+        </div> <br> 
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" name = "isTch[]"  value="1"> 教师
+          </label>
+        </div>
+        <button type="submit"  class="btn btn-success" id="login_btn">登录</button> 
+        <a  class="btn btn-default" href="sign.php" id="sign_btn" >注册</a> 
+    </form>
+
+
+  </div>
+</nav>
