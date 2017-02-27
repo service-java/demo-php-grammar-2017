@@ -5,7 +5,7 @@
  <head>
   <meta charset="utf-8">
   <title>网页布局</title>
-   <link href="layout-style.css" rel="stylesheet" type="text/css"/>
+   <link href="style.css" rel="stylesheet"/>
  </head>
 <body>
 	<div class="title">header</div>
