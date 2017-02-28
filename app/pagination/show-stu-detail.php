@@ -1,18 +1,23 @@
 <?php
-/* 查看学生信息 */
+/**
+ * Created by PhpStorm.
+ * User: Luo_0412
+ * Date: 2017/2/28
+ * Time: 20:42
+ */
 
 //载入函数库
-require './library/function.php';
+require 'pagination.lib.php';
 
 //载入学生数据
-$data = require './data.php';
+$data = require 'stu-data.php';
 
 $id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
 $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
 
 //检查指定查看的学生信息是否存在
 if(!isset($data['student'][$id])){
-	echo 'not found !';
+    echo 'not found !';
 }
 
 //获取学生资料
@@ -38,4 +43,4 @@ $labels = explode(',',$student['label']);
 //定义模板名称
 $view = 'detail';
 $title = '查看学生信息'; //定义页面标题
-require './view/layout.html';
+require 'view/layout.html';
