@@ -6,6 +6,7 @@ class Page{
 	private $pagesize;		//每页显示的条数
 	private $current;		//当前页
 	private $pagenum;		//总的页数
+	
 	/**
 	 * 分页类构造方法
 	 * @param int $total    总记录数

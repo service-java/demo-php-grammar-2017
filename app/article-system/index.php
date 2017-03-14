@@ -27,8 +27,8 @@ $total = $results['total'];
 
 //实例化分页类
 $Page = new Page($total,2,$page); //Page(总页数，每页显示条数，当前页)
-$limit = $Page->getLimit();       //获取分页链接条件
-$page_html = $Page->showPage();   //获取分页HTML链接
+$limit = $Page->getLimit();       // 获取分页链接条件
+$page_html = $Page->showPage();   // 获取分页HTML链接
 
 //分页获取文章列表
 $sql = "select `id`,`title`,`content`,`author`,`addtime`,`cid` from `cms_article` $where order by `addtime` desc limit $limit";

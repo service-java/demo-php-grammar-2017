@@ -1,4 +1,9 @@
-<?php if(!defined('APP')) die('error!'); ?>
+<?php
+    if(!defined('APP')) {
+        die('error!');
+    }
+?>
+
 <!doctype html>
 <html>
 <head>

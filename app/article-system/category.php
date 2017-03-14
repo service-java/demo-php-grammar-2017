@@ -44,6 +44,7 @@ elseif($a == 'category_sort'){
 	}
 	$sql = "update `cms_category` set `sort`=:sort where `id`=:id";
 	$db->data($data)->query($sql,true);
+	
 }
 
 
