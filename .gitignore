@@ -1,4 +1,8 @@
-﻿# 忽略临时文件夹
+# 忽略配置文件
+.vscode/*
+.idea/*
+
+# 忽略临时文件夹
 tmp/*
 
 # 忽略以tmp-开头的文件
@@ -7,5 +11,3 @@ tmp-*
 # 忽略src下的res文件夹
 assets/res/*
 assets/images/*
-
-
