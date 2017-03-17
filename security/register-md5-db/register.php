@@ -1,8 +1,16 @@
 <?php
+# @Author: 骆金参
+# @Date:   2017-02-27T21:23:25+08:00
+# @Email:  1095947440@qq.com
+# @Filename: register.php
+# @Last modified by:   骆金参
+# @Last modified time: 2017-03-17T23:20:34+08:00
+
+
 header('content-type:text/html;charset=utf-8');
 
 //引入表单验证函数库
-require 'check_form.lib.php';
+require 'lib/check_form.lib.php';
 
 //假设PHP程序收到了用户注册表单
 //演示正确的输入

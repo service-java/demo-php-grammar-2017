@@ -1,4 +1,12 @@
-<?php  
+<?php
+# @Author: 骆金参
+# @Date:   2017-02-27T21:23:24+08:00
+# @Email:  1095947440@qq.com
+# @Filename: function.php
+# @Last modified by:   骆金参
+# @Last modified time: 2017-03-17T23:24:57+08:00
+
+
 //页面重定向
 function page_redirect($back,$path,$info)
 {
@@ -22,4 +30,3 @@ function page_redirect($back,$path,$info)
 }
 
 ?>
-

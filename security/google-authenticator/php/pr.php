@@ -1,3 +1,12 @@
+<?php
+# @Author: 骆金参
+# @Date:   2017-02-27T21:23:24+08:00
+# @Email:  1095947440@qq.com
+# @Filename: pr.php
+# @Last modified by:   骆金参
+# @Last modified time: 2017-03-17T23:29:19+08:00
+?>
+
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
@@ -8,10 +17,10 @@
     <title>index</title>
 
     <!-- Bootstrap -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/carousel.css" rel="stylesheet">
-    <link href="../css/nav.css" rel="stylesheet">
-    <link href="../css/register.css" rel="stylesheet">
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/carousel.css" rel="stylesheet">
+    <link href="../assets/css/nav.css" rel="stylesheet">
+    <link href="../assets/css/register.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -71,10 +80,10 @@
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="../js/jquery.min.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/function.js"></script>
-    <script src="../js/register.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/function.js"></script>
+    <script src="../assets/js/register.js"></script>
   </body>
 </html>
