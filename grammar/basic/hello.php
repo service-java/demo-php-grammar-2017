@@ -1,10 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Luo_0412
- * Date: 2017/2/27
- * Time: 22:08
- */
+# @Author: 骆金参
+# @Date:   2017-02-27T22:08:03+08:00
+# @Email:  1095947440@qq.com
+# @Filename: hello.php
+# @Last modified by:   骆金参
+# @Last modified time: 2017-03-18T01:16:18+08:00
 
 require_once("lib.php");
 hr();
@@ -64,6 +64,8 @@ hr();
 define('CON', 'hello'); // 第三个参数是大小写敏感
 echo CON . "\n"; // hello
 echo constant('CON') . "\n"; // hello
+
+
 
 // const
 const PI = 3.14159;
