@@ -1,4 +1,12 @@
 <?php
+# @Author: 骆金参
+# @Date:   2017-02-27T21:23:17+08:00
+# @Email:  1095947440@qq.com
+# @Filename: book.class.php
+# @Last modified by:   骆金参
+# @Last modified time: 2017-03-17T22:50:14+08:00
+
+
 header('content-type:text/html;charset=utf-8');
 //载入goods类文件
 require './goods.class.php';
@@ -11,11 +19,8 @@ class book extends goods{
 	}
 }
 
-//实例化book类，book类继承了goods类，具有构造方法，需要传递相关参数
+//实例化book类
 $book = new book('PHP高级教程',45);
-
 echo $book->getName();
 echo '<hr>';
-
-//父类good类中getPrice是final方法，无法被重写
-echo $book->getPrice();
+echo $book->getPrice(); //父类good类中getPrice是final方法，无法被重写

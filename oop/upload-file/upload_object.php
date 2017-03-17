@@ -1,9 +1,14 @@
 <?php
-//声明文件解析的编码格式
-header('content-type:text/html;charset=utf-8');
+# @Author: 骆金参
+# @Date:   2017-02-27T21:23:17+08:00
+# @Email:  1095947440@qq.com
+# @Filename: upload_object.php
+# @Last modified by:   骆金参
+# @Last modified time: 2017-03-17T22:43:32+08:00
 
-//载入文件上传类文件
-require './upload.class.php';
+
+header('content-type:text/html;charset=utf-8'); //声明文件解析的编码格式
+require './upload.class.php'; //载入文件上传类文件
 
 //判断是否有文件上传
 if (isset($_FILES['pic'])) {

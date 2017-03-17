@@ -1,4 +1,12 @@
 <?php
+# @Author: 骆金参
+# @Date:   2017-02-27T21:23:17+08:00
+# @Email:  1095947440@qq.com
+# @Filename: upload.class.php
+# @Last modified by:   骆金参
+# @Last modified time: 2017-03-17T22:40:33+08:00
+
+
 
 /**
  * 文件上传类
@@ -13,7 +21,7 @@ class upload {
     private $upload_path = './';
     //上传文件时产生的错误
     private $error = '';
-    
+
     /**
      * 构造方法
      * @param array $params 用来修改成员属性的数组数据
@@ -30,9 +38,9 @@ class upload {
         if(isset($params['path'])) $this->upload_path = $params['path'];
 
     }
-    
-    
-    
+
+
+
     /**
      * 上传文件的函数
      * @param array $file 包含文件的5个信息的数据
@@ -94,7 +102,7 @@ class upload {
         //获取私有属性$error
         return $this->error;
     }
-    
+
     public function __destruct() {
         echo "<p class='box'>upload对象被销毁的时间为：".date("H:i:s").'</p>';
     }

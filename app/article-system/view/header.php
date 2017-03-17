@@ -1,4 +1,13 @@
 <?php if(!defined('APP')) die('access denied'); ?>
+# @Author: 骆金参
+# @Date:   2017-02-27T21:23:46+08:00
+# @Email:  1095947440@qq.com
+# @Filename: header.php
+# @Last modified by:   骆金参
+# @Last modified time: 2017-03-15T14:54:00+08:00
+
+
+
 <!doctype html>
 <html>
  <head>
@@ -20,7 +29,7 @@
 				<?php endforeach;?>
 			</ul>
 		</div>
-	
+
 	</div>
 	<!--错误信息-->
 	<?php if(!empty($error)): ?>

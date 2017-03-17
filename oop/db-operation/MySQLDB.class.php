@@ -1,4 +1,12 @@
 <?php
+# @Author: 骆金参
+# @Date:   2017-02-27T21:23:17+08:00
+# @Email:  1095947440@qq.com
+# @Filename: MySQLDB.class.php
+# @Last modified by:   骆金参
+# @Last modified time: 2017-03-17T23:07:08+08:00
+
+
 
 /**
  * MySQL数据库操作类（基于 mysql扩展完成）
@@ -6,19 +14,17 @@
  */
 class MySQLDB {
 
-	//数据库连接信息
+	  //数据库连接信息
     private $dbConfig = array(
-		'host' => 'localhost', //主机
-		'port' => '3306',      //端口
-		'user' => '',          //用户
-		'pwd' => '',           //密码
-		'charset' => 'utf8',   //字符集
-		'dbname' => '',        //默认的数据库
-	);
-
+  		'host' => 'localhost', //主机
+  		'port' => '3306',      //端口
+  		'user' => '',          //用户
+  		'pwd' => '',           //密码
+  		'charset' => 'utf8',   //字符集
+  		'dbname' => '',        //默认的数据库
+	  );
     //数据库连接资源
     private $link;
-
     //单例对象
     private static $instance;
 
@@ -41,34 +47,30 @@ class MySQLDB {
      * 构造方法
      * @param array $params 关联数组
      */
-    private function __construct($params = array()) {
-        //初始化数据库连接信息
-		$this->initAttr($params);
-        //连接数据库
-        $this->connectServer();
-        //设定字符集
-        $this->setCharset();
-        //选择默认数据
-        $this->selectDefaultDb();
+    private function __construct($params = array()) {//初始化数据库连接信息
+		    $this->initAttr($params); //单例对象
+        $this->connectServer(); //连接数据库
+        $this->setCharset(); //设定字符集
+        $this->selectDefaultDb(); //选择默认数据
     }
 
     public function __destruct() {
-        //mysql_close($this->link);
+        @mysql_close($this->link);
     }
 
     /**
      * 私有克隆
      */
     private function __clone() {
-        
+
     }
 
     /**
      * 初始化属性
-	 * @param array $params 数据库连接信息
+	   * @param array $params 数据库连接信息
      */
     private function initAttr($params) {
-		//初始化属性，使用 array_marge() 函数合并两个数组
+		    //初始化属性，使用 array_marge() 函数合并两个数组
         $this->dbConfig = array_merge($this->dbConfig,$params);
     }
 
@@ -76,12 +78,13 @@ class MySQLDB {
      * 连接目标服务器
      */
     private function connectServer() {
-		$host = $this->dbConfig['host'];
-		$port = $this->dbConfig['port'];
-		$user = $this->dbConfig['user'];
-		$pwd = $this->dbConfig['pwd'];
+		    $host = $this->dbConfig['host'];
+        $port = $this->dbConfig['port'];
+        $user = $this->dbConfig['user'];
+        $pwd = $this->dbConfig['pwd'];
+
         //连接数据库服务器
-        if ($link = mysql_connect("$host:$port",$user ,$pwd)) {
+        if ($link = @mysql_connect("$host:$port",$user ,$pwd)) {
             $this->link = $link;
         } else {
             //失败
@@ -115,7 +118,7 @@ class MySQLDB {
      * @return mixed 查询语句返回结果集，非查询语句返回 true
      */
     public function query($sql) {
-        if ($result = mysql_query($sql, $this->link)) {
+        if (@$result = mysql_query($sql, $this->link)) {
             //执行成功
             return $result;
         } else {

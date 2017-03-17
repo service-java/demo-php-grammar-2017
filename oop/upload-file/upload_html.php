@@ -1,3 +1,13 @@
+<?php
+# @Author: 骆金参
+# @Date:   2017-02-27T21:23:17+08:00
+# @Email:  1095947440@qq.com
+# @Filename: upload_html.php
+# @Last modified by:   骆金参
+# @Last modified time: 2017-03-17T22:44:38+08:00
+
+?>
+
 <!doctype html>
 <html>
 <head>
@@ -18,7 +28,7 @@
 		<h2>编辑用户头像</h2>
 		<p>用户姓名：小明</p>
 		<p class="exist">现有头像：</p>
-		<img src="<?php echo './'.$pic_path; ?>" onerror="this.src='./default.jpg'" />
+		<img src="<?php echo './'.$pic_path; ?>" onerror="this.src='default.jpg'" />
 		<form action="./upload_object.php" method="post" enctype="multipart/form-data">
 			<p class="upload">上传头像：<input name="pic" type="file"/></p>
 			<p><input class="sub" type="submit" value="保存头像"></p>
