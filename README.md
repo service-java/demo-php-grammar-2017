@@ -4,8 +4,10 @@
 @Email:  1095947440@qq.com
 @Filename: README.md
 @Last modified by:   骆金参
-@Last modified time: 2017-03-17T23:34:21+08:00
+@Last modified time: 2017-03-19T20:13:39+08:00
 -->
 
 php基础学习代码
-ajax
+
+参考:
+菜鸟教程
