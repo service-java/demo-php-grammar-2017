@@ -4,4 +4,6 @@
 
 # 忽略临时文件夹
 tmp/*
-# tmp-*
+tmp-*
+
+upload/*

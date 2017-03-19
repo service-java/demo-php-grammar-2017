@@ -1,4 +1,12 @@
 <?php
+# @Author: 骆金参
+# @Date:   2017-02-27T21:23:17+08:00
+# @Email:  1095947440@qq.com
+# @Filename: goods.class.php
+# @Last modified by:   骆金参
+# @Last modified time: 2017-03-19T18:16:04+08:00
+
+
 /**
  * 定义商品类，使用abstract将类声明为抽象类
  * 该类提供基础属性$name，$price，构造方法
