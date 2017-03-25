@@ -35,7 +35,7 @@ if(!empty($error)){
 }
 
 //连接数据库，设置字符集，选择数据库
-mysql_connect('localhost','root','ljc578762') or die('数据库连接失败！');
+mysql_connect('localhost','root','root') or die('数据库连接失败！');
 mysql_query('set names utf8');
 mysql_query('use `luo_test`') or die('luo_test数据库不存在！');
 

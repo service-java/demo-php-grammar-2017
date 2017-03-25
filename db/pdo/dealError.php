@@ -9,7 +9,7 @@
 
 try{
 	//连接数据库
-	$pdo = new PDO('mysql:host=localhost;dbname=itcast;charset=utf8','root','ljc578762');
+	$pdo = new PDO('mysql:host=localhost;dbname=itcast;charset=utf8','root','root');
 	//设置错误处理
 	// $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_SILENT);
 	//$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_WARNING);

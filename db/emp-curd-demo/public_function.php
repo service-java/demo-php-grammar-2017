@@ -3,7 +3,7 @@
  * 初始化数据库连接
  */
 function dbInit(){
-	@$link = mysql_connect('localhost','root','ljc578762');
+	@$link = mysql_connect('localhost','root','root');
 	//判断数据库连接是否成功，如果不成功则显示错误信息并终止脚本继续执行
 	if(!$link){
 		die('连接数据库失败！'.mysql_error());

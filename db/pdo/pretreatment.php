@@ -5,7 +5,7 @@ header('Content-Type:text/html;charset=utf-8');
 
 try{
 	//连接数据库
-	$pdo = new PDO("mysql:host=localhost;dbname=luo_test;charset=utf8","root","ljc578762");
+	$pdo = new PDO("mysql:host=localhost;dbname=luo_test;charset=utf8","root","root");
 
 	//预处理的SQL语句
 	$stmt = $pdo->prepare("insert into `books`(`book_name`,`book_author`) values(?,?)");

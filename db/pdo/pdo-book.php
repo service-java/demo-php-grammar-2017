@@ -11,7 +11,7 @@ $dbname = 'luo_test';
 $charset = 'utf8';
 //用户名和密码
 $user = 'root';
-$pwd = 'ljc578762';
+$pwd = 'root';
 $dsn = "$dbms:host=$host;port=$port;dbname=$dbname;charset=$charset";
 
 try{

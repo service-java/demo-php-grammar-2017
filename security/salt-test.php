@@ -17,5 +17,5 @@ echo "根据时间生成盐 " . $salt . "\n";
 echo "加盐生成密码   " . md5($salt.md5("imedia666")) . "\n";
 
 // hash
-$pwd = "ljc578762";
+$pwd = "root";
 echo "hash以后的密码 " . hash('sha512', $pwd);
