@@ -2,8 +2,7 @@
 .vscode/*
 .idea/*
 
-# 忽略临时文件夹
+# 忽略临时文件
 tmp/*
 tmp-*
-
 upload/*
