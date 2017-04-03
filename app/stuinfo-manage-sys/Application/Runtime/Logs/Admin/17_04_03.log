@@ -1,0 +1,4 @@
+[ 2017-04-03T18:39:41+08:00 ] ::1 /hello-php/app/stuinfo-manage-sys/index.php/admin/Student/addAll
+ERR: 1062:Duplicata du champ '0' pour la clef 'student_number'
+ [ SQL语句 ] : INSERT INTO `stu_student` (`student_number`,`student_name`,`student_birthday`,`student_gender`,`class_id`) VALUES ('0','a\'s\'d\'v\'b\'f',' 啊的v发','女','2'),('0','a\'s\'d\'v\'b\'f',' 啊的v发','男','1'),('0','a\'s\'d\'v\'b\'f',' 啊的v发','男','1'),('0','a\'s\'d\'v\'b\'f',' 啊的v发','男','1')
+

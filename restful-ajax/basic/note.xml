@@ -1,8 +1,7 @@
-<!--
-@Author: 骆金参
-@Date:   2017-04-03T02:14:30+08:00
-@Email:  1095947440@qq.com
-@Filename: note.xml
-@Last modified by:   骆金参
-@Last modified time: 2017-04-03T02:14:40+08:00
--->
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<note>
+<to>Tove</to>
+<from>Jani</from>
+<heading>Reminder</heading>
+<body>Don't forget me this weekend!</body>
+</note>

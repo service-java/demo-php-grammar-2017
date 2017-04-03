@@ -1,8 +1,9 @@
 # 忽略配置文件
-.vscode/*
-.idea/*
+.vscode
+.idea
 
 # 忽略临时文件
-tmp/*
+tmp
 tmp-*
-upload/*
+upload
+uploads
