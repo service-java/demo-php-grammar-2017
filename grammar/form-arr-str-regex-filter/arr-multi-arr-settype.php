@@ -6,9 +6,6 @@
 # @Last modified by:   骆金参
 # @Last modified time: 2017-04-02T23:30:18+08:00
 
-
-function hr() { echo "\n--------\n"; }
-
 // 数组的声名
 // $info = array('id'=>1,'help',3=>'msg');
 //$info = array(1,2,3,4);
@@ -21,21 +18,21 @@ $arr[] = 'hi';
 $arr[5] = '5';
 $arr[] = 'world';
 $arr['sub'] = 'sub';
-echo $arr[5] , "\n"; // 取不存在的下标会报错
+echo $arr[5] , PHP_EOL; // 取不存在的下标会报错
 var_dump($arr);
-hr();
+echo PHP_EOL;
 
 
 // 数组遍历
 foreach($arr as $key => $value) {
-    echo $key . "=>" . $value . "\n";
+    echo $key . "=>" . $value . PHP_EOL;
 }
-hr();
+echo PHP_EOL;
 
 foreach($arr as $value) {
-    echo $value . "\n";
+    echo $value . PHP_EOL;
 }
-hr();
+echo PHP_EOL;
 
 // 多维数组
 $goods = array(
@@ -49,14 +46,15 @@ foreach($goods as $values) {
     foreach($values as $v){
         echo $v . " ";
     }
-    echo "\n";
+    echo PHP_EOL;
 }
-hr();
+echo PHP_EOL;
+
 
 /////////////// gettype与settype
 $good = ['t', 2];
 // echo gettype($good) . "\n";
-echo gettype($good[1]) . "\n"; // integer
+echo gettype($good[1]) . PHP_EOL; // integer
 settype($good[1], 'string');
-echo gettype($good[1]) . "\n"; // string
-hr();
+echo gettype($good[1]) . PHP_EOL; // string
+echo PHP_EOL;

@@ -24,10 +24,10 @@ function customError($errno, $errstr) {
 	die();
 }
 
-set_error_handler("customError",E_USER_WARNING);
+set_error_handler("customError",E_USER_WARNING); // 没被捕捉到错误,指定函数处理
 
 // 触发错误
 $test=2;
 if ($test>1) {
-	trigger_error("变量值必须小于等于 1", E_USER_WARNING);
+	trigger_error("变量值必须小于等于 1", E_USER_WARNING); // 触发错误
 }

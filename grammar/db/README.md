@@ -1,3 +1,6 @@
+* 简单的新增代码示例
+
+```
 <?php
 //声明文件解析的编码格式
 header('content-type:text/html;charset=utf-8');
@@ -38,7 +41,7 @@ if(!empty($_POST)){
 
 	//将$values数组以逗号连接，赋值给$values，组成insert语句中的值部分
 	$values = implode(',', $values);
-	
+
 	//最后把$fields和$values拼接到insert语句中，注意要指定表名
 	$sql = "insert into `emp_info` ($fields) values ($values)";
 
@@ -56,3 +59,4 @@ if(!empty($_POST)){
 //没有表单提交时，显示员工添加页面
 define('APP', 'itcast');
 require './add_html.php';
+```
