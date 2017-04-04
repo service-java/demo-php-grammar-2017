@@ -9,7 +9,7 @@ $error = array();	//保存错误信息
 function showRegPage(){
 
 	$error = $GLOBALS['error'];//从全局变量读取错误信息
-	
+
 	define('APP','itcast');
 	require 'register_html.php';
 
@@ -37,7 +37,7 @@ if(!empty($error)){
 //连接数据库，设置字符集，选择数据库
 mysql_connect('localhost','root','root') or die('数据库连接失败！');
 mysql_query('set names utf8');
-mysql_query('use `luo_test`') or die('luo_test数据库不存在！');
+mysql_query('use `form8888`') or die('luo_test数据库不存在！');
 
 //接收需要处理的表单字段
 $username = trim($_POST['username']);
@@ -45,7 +45,7 @@ $password = $_POST['password'];
 $email = trim($_POST['email']);
 
 //载入表单验证函数库，验证用户名和密码格式
-require '../src/js/check_form.lib.php';
+require './check_form.lib.php';
 if(($result = checkUsername($username)) !== true)  $error[] = $result;
 if(($result = checkPassword($password)) !== true)  $error[] = $result;
 if(($result = checkEmail($email)) !== true)  $error[] = $result;
@@ -78,10 +78,10 @@ if($rst){
 
 	//用户注册成功，自动登录
 	session_start();
-	
+
 	//获取新注册用户的ID
 	$id = mysql_insert_id();
-	
+
 	$_SESSION['userinfo'] = array(
 		'id' => $id,				//将用户id保存到SESSION
 		'username' => $username		//将用户名保存到SESSION

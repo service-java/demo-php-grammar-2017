@@ -1,7 +1,5 @@
 <?php
-    if(!defined('APP')) {
-        die('error!');
-    }
+    if(!defined('APP')) { die('error!'); }
 ?>
 
 <!doctype html>

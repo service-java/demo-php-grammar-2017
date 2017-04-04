@@ -1,6 +1,6 @@
 <?php
 header("content-type:text/html;charset=utf-8");
-	
+
 //准备测试数据
 $all_data = array(
 	//文章id => array(文章标题,文章内容)
@@ -66,7 +66,9 @@ if(isset($_COOKIE['history'])){
 	setcookie('history',$id);
 }
 
-//清除历史功能
+
+// 清除历史功能
+// 通过判断这种方法是否存在
 if(isset($_GET['action'])){
 	if($_GET['action'] == 'clear'){
 		$cookie_arr = array();  //清除历史记录数组
@@ -87,5 +89,5 @@ foreach($cookie_arr as $v){
 }
 
 //加载HTML模板文件
-define('APP','itcast');
+define('APP','hello');
 require('cookie-article-html.php');

@@ -12,9 +12,9 @@ echo '<title>表单控件生成</title>';
 function make_radio($name,$value,$checked){
 	$html = ''; //$html保存拼接的HTML
 	foreach($value as $v){
-		if($checked == $v){
+		if($v == $checked){
 			$html .= "<input type=\"radio\" name=\"$name\" value=\"$v\" checked />$v ";
-		}else{
+		} else{
 			$html .= "<input type=\"radio\" name=\"$name\" value=\"$v\" />$v ";
 		}
 	}
@@ -23,4 +23,4 @@ function make_radio($name,$value,$checked){
 
 //生成一组单选按钮
 $value = array('苹果','香蕉','橘子','番茄');
-echo make_radio('fruit',$value,'香蕉');
+echo make_radio('fruit', $value, '香蕉');

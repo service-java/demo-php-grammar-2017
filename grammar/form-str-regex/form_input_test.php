@@ -10,8 +10,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<meta charset="utf-8">
-<title>菜鸟教程(runoob.com)</title>
+  <meta charset="utf-8">
 </head>
 <body>
 
@@ -19,8 +18,8 @@
 // 定义变量并默认设置为空值
 $name = $email = $gender = $comment = $website = "";
 
-if ($_SERVER["REQUEST_METHOD"] == "POST")
-{
+// 通过判断方法来判断是否已经提交过了
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
    $name = test_input($_POST["name"]);
    $email = test_input($_POST["email"]);
    $website = test_input($_POST["website"]);
@@ -28,8 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
    $gender = test_input($_POST["gender"]);
 }
 
-function test_input($data)
-{
+function test_input($data) {
    $data = trim($data);
    $data = stripslashes($data);
    $data = htmlspecialchars($data);
@@ -56,14 +54,10 @@ function test_input($data)
 
 <?php
 echo "<h2>您输入的内容是:</h2>";
-echo $name;
-echo "<br>";
-echo $email;
-echo "<br>";
-echo $website;
-echo "<br>";
-echo $comment;
-echo "<br>";
+echo $name, "<br>";
+echo $email, "<br>";
+echo $website, "<br>";
+echo $comment, "<br>";
 echo $gender;
 ?>
 

@@ -6,7 +6,7 @@ header('Content-Type:text/html;charset=utf-8');
 //连接数据库，设置字符集，选择数据库
 @mysql_connect('localhost','root','root') or die('数据库连接失败！');
 mysql_query('set names utf8');
-mysql_query('use `luo_test`') or die('luo_test数据库不存在！');
+mysql_query('use `form8888`') or die('数据库不存在！');
 
 //定义数组$city保存预设的城市下拉列表
 $city = array('北京','上海','广州','其他');
@@ -19,7 +19,7 @@ $id = 1;
 
 //判断是否有表单提交
 if(!empty($_POST)){
-	
+
 	//当有表单提交时，收集表单数据，保存到数据库中
 
 	//显示接收到的表单数据
@@ -47,7 +47,7 @@ if(!empty($_POST)){
 	//复选框处理
 	if(is_array($save_data['skill'])){
 		$save_data['skill'] = array_intersect($skill,$save_data['skill']);	//只取出合法的数组元素
-		$save_data['skill'] = implode(',',$save_data['skill']);  //将数组转换为用逗号分隔的字符串	
+		$save_data['skill'] = implode(',',$save_data['skill']);  //将数组转换为用逗号分隔的字符串
 	}else{
 		$save_data['skill'] = '';
 	}

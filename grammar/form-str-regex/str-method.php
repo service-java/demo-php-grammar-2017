@@ -7,5 +7,5 @@
 # @Last modified time: 2017-03-18T01:26:45+08:00
 
 
-echo strlen("Hello world!\n"),"\n"; // 13
-echo strpos("Hello world!","world");
+echo strlen("Hello world!\n"), "\n"; // 13
+echo strpos("Hello world!", "world");

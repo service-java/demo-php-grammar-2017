@@ -11,7 +11,7 @@ if(!empty($_POST)){
 	$password = isset($_POST['password']) ? $_POST['password'] : '';
 
 	//载入表单验证函数库，验证用户名和密码格式
-	require '../src/js/check_form.lib.php';
+	require './check_form.lib.php';
 	if(($result = checkUsername($username)) !== true)  $error[] = $result;
 	if(($result = checkPassword($password)) !== true)  $error[] = $result;
 
@@ -21,7 +21,7 @@ if(!empty($_POST)){
 		//连接数据库，设置字符集，选择数据库
 		@mysql_connect('localhost','root','root') or die('数据库连接失败！');
 		mysql_query('set names utf8');
-		mysql_query('use `luo_test`') or die('itcast数据库不存在！');
+		mysql_query('use `form8888`') or die('itcast数据库不存在！');
 
 		//SQL转义
 		$username = mysql_real_escape_string($username);

@@ -10,25 +10,26 @@
 $int = 300;
 
 if(!filter_var($int, FILTER_VALIDATE_INT)) {
-    echo("不是一个合法的整数");
-}
-else {
-    echo("是个合法的整数");
+    echo("不是合法整数") , PHP_EOL;
+} else {
+    echo("合法整数") , PHP_EOL;
 }
 
-$int_options = array( "options"=>array(
+// 范围
+$int_options =  array(
+  "options"=>array(
         "min_range"=>0,
         "max_range"=>256
-    )
+  )
 );
 
-if(!filter_var($int, FILTER_VALIDATE_INT, $int_options))
-{
-    echo("不是一个合法的整数");
-}
-else
-{
-    echo("是个合法的整数");
+// 之所以先写false
+// 错的判定更好下
+// 查不出错不代表对
+if(!filter_var($int, FILTER_VALIDATE_INT, $int_options)) {
+    echo("整数不在范围内") , PHP_EOL;
+} else {
+    echo("整数在范围内") , PHP_EOL;
 }
 
 // 净化输入
