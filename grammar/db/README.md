@@ -1,4 +1,6 @@
-* 简单的新增代码示例
+#### 数据库操作
+
+* 传统连接
 
 ```
 <?php
@@ -59,4 +61,21 @@ if(!empty($_POST)){
 //没有表单提交时，显示员工添加页面
 define('APP', 'itcast');
 require './add_html.php';
+```
+
+* mysqli
+
+```
+// bind_result 将结果绑定到变量中
+if($stmt = $conn->prepare("SELECT `id`, `name` FROM `student` ")) {
+	$stmt->excute();
+	$stmt->bind_result($var1, $var2);
+	while($stmt->fetch()) {
+		printf("%s, %s\n", $var1, $var2);
+	}
+	$stmt->close();
+}
+
+// get_result
+// send_long_data
 ```
