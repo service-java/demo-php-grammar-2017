@@ -1,0 +1,21 @@
+CREATE TABLE `menu` (
+	`menu_id` INT(11) NOT NULL AUTO_INCREMENT,
+	`menu_name` VARCHAR(100),
+	`menu_url` VARCHAR(300),
+        `parent_id` INT,
+	`menu_layer` INT,
+	`menu_order` INT,
+	PRIMARY KEY (`menu_id`)
+);
+
+INSERT INTO `menu` (`menu_id`, `menu_name`, `menu_url`, `parent_id`, `menu_layer`, `menu_order`) VALUES
+	(1, '图书', '0', 0, 0, 0),
+	(2, '电脑', '0', 0, 0, 0),
+	(3, '汽车', '0', 0, 0, 0),
+	(4, '小说', '0', 1, 1, 0),
+	(5, '儿童故事', '0', 1, 1, 1),
+	(6, '历史人物', '0', 1, 1, 2),
+	(7, '笔记本', '0', 2, 2, 0),
+	(8, '台式机 ', '0', 2, 2, 1),
+	(9, '武打小说', '0', 4, 3, 1),
+	(10, '桌面PAD', '0', 7, 3, 1);

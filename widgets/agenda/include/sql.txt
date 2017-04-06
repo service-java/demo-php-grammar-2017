@@ -1,0 +1,10 @@
+CREATE TABLE `agenda` (
+	`id` INT(11) NOT NULL AUTO_INCREMENT,
+	`title` VARCHAR(500),
+	`content` text,
+	`starttime` datetime,
+	`endtime` datetime,
+	`allday` INT(1),
+	`end` INT(1),
+	PRIMARY KEY (`id`)
+);
