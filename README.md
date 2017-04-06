@@ -3,5 +3,5 @@
 * 说明
 
 ```
-Atom + Wamp Server + MySQL
+Atom + Wamp Server + MySQL/MariaDB + Atom script插件
 ```

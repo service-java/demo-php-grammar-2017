@@ -1,5 +1,17 @@
 #### RESTful 和　AJAX
 
+* XML/JSON基础
+
+```
+DOMDocument //  先读取整个文档再进行操作
+SimpleXML(SAX) // 可以把XML转化成对象进行操作 处理大的XML
+$xml = simplexml_load_file("plays.xml");
+echo $xml->play[0]->author;
+
+XMLReader // 基于流的解析器 可以分次读取实时交互 处理大型XML有更高的效率
+正则表达式读取方法  // 要求不严格的时候
+```
+
 * AJAX
 
 ```
