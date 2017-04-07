@@ -20,3 +20,14 @@
 
 // 设置缓存
 ```
+
+* cakePHP
+
+```
+// intl扩展
+
+// 数据库
+config/app.php // app.default.php 相当于备份 而app.php不能上传泄露
+
+cd cakephp/bin
+```
