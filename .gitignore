@@ -7,3 +7,9 @@ tmp
 tmp-*
 upload
 uploads
+
+# smarty处理
+smartydemo/cache
+smartydemo/template_c
+smartydemo/demo/cache
+smartydemo/demo/template_c
