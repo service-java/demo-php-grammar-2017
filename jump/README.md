@@ -114,15 +114,12 @@ public function action()
 
 * cakePHP 数据库操作
 
-```
+```php
 $result = $students
   -> find()
-  -> where(['id IN' => $idArray]);
+  -> where(['id IN' => $idArray])
+  -> count(); // 返回记录的总数
 
-// 返回记录的总数
-$result = $students
-  -> find()
-  -> count();
 
 // 也可以直接SQL 语句
 // 安全传参
@@ -132,4 +129,60 @@ $stmt->bindValue(2, 'M', 'string');
 
 $stmt = $connection->prepare('SELECT * FROM students WHERE name = :name');
 $stmt->bindValue('name', 'tom', 'string');   
+```
+
+* CodeIgniter
+
+```php
+// Atom安装codeIgniter的插件先
+
+// 配置数据库
+// sql文件和cakephp 是同一个
+application/config database.php $db['default']
+'db_debug' => true
+
+// New application/models/Studentmodel.php
+// New application/views/showstudent.php
+// New application/controllers/Student.php
+访问 http://localhost/hello-php/jump/ci-demo/index.php/Student
+
+
+// 设置网站地址
+application/config/config.php
+$config['base_url'] = 'http://www.abc.com' // 没有则ci自行猜测
+
+// 修改网站的默认配置
+application/config/routes.php
+$route['default_controller'] = 'student'
+
+// 数据库配置
+$active_group
+$autoload['libraries'] = array('database');
+
+// 路由配置
+:num
+:array_change_key_case
+
+// 取消URL中的index.php httpd.conf  
+#LoadModule rewrite_module modules/mod_rewrite.so
+AllowOverride None -> AllowOverride ALL
+
+.htaccess
+```
+
+* CodeIgniter 使用技巧
+
+```
+// URL辅助函数
+// Form辅助函数
+// HTML辅助函数
+// 数据库操作
+
+$result = $this->db->get('student')
+
+$this->db->from('students');
+$this->db->select('name, gender');
+$this->db->order_by('name');
+$this->db->where('name', 'tom');
+$result = $this->db->get();
 ```
