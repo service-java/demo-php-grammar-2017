@@ -9,7 +9,7 @@ upload
 uploads
 
 # smarty处理
-smartydemo/cache
-smartydemo/template_c
-smartydemo/demo/cache
-smartydemo/demo/template_c
+jump/smartydemo/cache/*
+jump/smartydemo/templates_c/*
+jump/smartydemo/demo/cache/*
+jump/smartydemo/demo/templates_c/*
