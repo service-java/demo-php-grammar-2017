@@ -1,0 +1,5 @@
+msgid "Are you sure you want to delete record {0} ?"
+msgstr "你是否确定删除记录 {} ?"
+
+msgid "New Student"
+msgstr "新建学生"

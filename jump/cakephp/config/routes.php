@@ -51,10 +51,12 @@ Router::scope('/', function (RouteBuilder $routes) {
      */
     $routes->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']);
 
-    /**
-     * ...and connect the rest of 'Pages' controller's URLs.
-     */
     $routes->connect('/pages/*', ['controller' => 'Pages', 'action' => 'display']);
+
+    // 自定义
+    // $routes->connect('/students/*', ['controller' => 'Students', 'action' => 'view']);
+    $routes->connect('/pups/*', ['controller' => 'Students']);
+    $routes->connect('/pups/:actions/*', ['controller' => 'Students']);
 
     /**
      * Connect catchall routes for all controllers.
